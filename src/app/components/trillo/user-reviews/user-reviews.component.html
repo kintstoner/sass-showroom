@@ -1,0 +1,19 @@
+<div class="user-reviews">
+  @for(user of userReviews; track user){
+  <figure class="review">
+    <blockquote class="review__text">
+      {{ user.review }}
+    </blockquote>
+    <figcaption class="review__user">
+      <img src="{{ user.img }}" alt="{{ user.name }}" class="review__photo" />
+      <div class="review__user-box">
+        <p class="review__user-name">{{ user.name }}</p>
+        <p class="review__user-date">{{ user.date }}</p>
+      </div>
+      <div class="review__rating">{{ user.rating }}</div>
+    </figcaption>
+  </figure>
+  }
+
+  <btn-inline text="Show All" [icon]="true"></btn-inline>
+</div>

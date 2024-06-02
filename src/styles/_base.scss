@@ -1,0 +1,124 @@
+@import "mixins";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+  @include tablet-land {
+    font-size: 50%; // 1rem = 8px, 8px/16px = 50%
+  }
+}
+
+.page-container-nexter {
+  font-family: var(--font-nexter-primary);
+  color: var(--color-nexter-grey-dark-2);
+  font-weight: 300;
+  line-height: 1.6;
+
+  %heading {
+    font-family: var(--font-nexter-display);
+    font-weight: 400;
+  }
+
+  .heading-1 {
+    @extend %heading;
+
+    font-size: 4.5rem;
+    color: var(--color-nexter-grey-light-1);
+    line-height: 1;
+  }
+  .heading-2 {
+    @extend %heading;
+    font-size: 4rem;
+    font-style: italic;
+    line-height: 1;
+
+    &--light {
+      color: var(--color-nexter-grey-light-1);
+    }
+    &--dark {
+      color: var(--color-nexter-grey-dark-1);
+    }
+  }
+  .heading-3 {
+    @extend %heading;
+    font-size: 1.6rem;
+    color: var(--color-nexter-primary);
+    text-transform: uppercase;
+  }
+  .heading-4 {
+    @extend %heading;
+    font-size: 1.9rem;
+
+    &--light {
+      color: var(--color-nexter-grey-light-1);
+    }
+
+    &--dark {
+      color: var(--color-nexter-grey-dark-1);
+    }
+  }
+
+  .btn {
+    background-color: var(--color-nexter-primary);
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    font-family: var(--font-nexter-display);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1.8rem 3rem;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: var(--color-nexter-primary-dark);
+    }
+  }
+
+  .mb-sm {
+    margin-bottom: 2rem;
+  }
+  .mb-md {
+    margin-bottom: 3rem;
+  }
+  .mb-lg {
+    margin-bottom: 4rem;
+  }
+  .mb-hg {
+    margin-bottom: 8rem;
+  }
+}
+
+.page-container-trillo {
+  //Base settings
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-grey-dark-2);
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  min-height: 100vh;
+
+  padding: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include desktop {
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}

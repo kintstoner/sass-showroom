@@ -1,0 +1,113 @@
+<div class="page-container-nexter">
+  <div class="nexter-container">
+    <div class="sidebar">
+      <button class="nav-btn"></button>
+    </div>
+
+    <app-header class="header"></app-header>
+
+    <div class="realtors">
+      <h3 class="heading-3">Top 3 Realtors</h3>
+      <div class="realtors__list">
+        <img
+          src="assets/img/realtor-1.jpeg"
+          alt="realtor 1"
+          class="realtors__img"
+        />
+        <div class="div realtors__details">
+          <h4 class="heading-4 heading-4--light">Erik Feinman</h4>
+          <p class="realtors__sold">212 houses sold</p>
+        </div>
+
+        <img
+          src="assets/img/realtor-2.jpeg"
+          alt="realtor 2"
+          class="realtors__img"
+        />
+        <div class="div realtors__details">
+          <h4 class="heading-4 heading-4--light">Kim Brown</h4>
+          <p class="realtors__sold">245 houses sold</p>
+        </div>
+
+        <img
+          src="assets/img/realtor-3.jpeg"
+          alt="realtor 3"
+          class="realtors__img"
+        />
+        <div class="div realtors__details">
+          <h4 class="heading-4 heading-4--light">Tobey Ramsey</h4>
+          <p class="realtors__sold">198 houses sold</p>
+        </div>
+      </div>
+    </div>
+
+    <app-features class="features"></app-features>
+
+    <div class="story__pictures">
+      <img
+        src="assets/img/story-1.jpeg"
+        alt="couple with new house"
+        class="story__img--1"
+      />
+      <img
+        src="assets/img/story-2.jpeg"
+        alt="new house"
+        class="story__img--2"
+      />
+    </div>
+
+    <app-story-content class="story__content"></app-story-content>
+
+    <section class="homes">
+      @for(home of homeCards ; track home){
+      <app-home-card
+        class="home"
+        [img]="home.img"
+        [title]="home.title"
+        [location]="home.location"
+        [rooms]="home.rooms"
+        [area]="home.area"
+        [price]="home.price"
+      ></app-home-card>
+      }
+    </section>
+
+    <section class="gallery">
+      @for(image of gallery ; track image){
+      <figure [class]="'gallery__item' + ' ' + 'gallery__item--' + image">
+        <img
+          src="assets/img/gal-{{ image }}.jpeg"
+          alt="gallery image {{ image }}"
+          class="gallery__img"
+        />
+      </figure>
+      }
+    </section>
+
+    <footer class="footer">
+      <ul class="nav">
+        <li class="nav__item">
+          <a href="#" class="nav__link">find your dream home</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Request proposal</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Download the home planner</a>
+        </li>
+        <li class="nav__item"><a href="#" class="nav__link">Contact us</a></li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Submit your property</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Work with us</a>
+        </li>
+      </ul>
+      <p class="copy">
+        &copy; 2024 by Álex Roca, please feel free to use this project for your
+        own purposes. This does NOT apply if you plan to produce your own
+        course.
+      </p>
+    </footer>
+  </div>
+</div>

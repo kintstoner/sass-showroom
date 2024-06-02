@@ -1,0 +1,26 @@
+<div class="description">
+  <p class="paragraph">{{ description.info1 }}</p>
+
+  <p class="paragraph">
+    {{ description.info2 }}
+  </p>
+
+  <ul class="list">
+    @for(item of description.points; track item){
+    <li class="list__item">{{ item.point }}</li>
+    }
+  </ul>
+
+  <div class="recommend">
+    <p>{{ description.recommendation }}</p>
+    <div class="recommend__friends">
+      @for(item of description.people; track item){
+      <img
+        src="{{ item.path }}"
+        alt="{{ item.name }}"
+        class="recommend__photo"
+      />
+      }
+    </div>
+  </div>
+</div>

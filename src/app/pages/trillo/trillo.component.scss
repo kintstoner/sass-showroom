@@ -1,0 +1,98 @@
+@import "mixins";
+
+.trillo-container {
+  max-width: 120rem;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  box-shadow: var(--shadow-dark);
+
+  @include desktop {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .header {
+    font-size: 1.4rem;
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: var(--line);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include phone {
+      flex-wrap: wrap;
+      height: 11rem;
+      align-content: space-around;
+    }
+
+    .logo {
+      height: 3.25rem;
+      margin-left: 2rem;
+    }
+
+    .search-bar {
+      flex: 0 0 40%;
+
+      @include phone {
+        order: 1;
+        flex: 0 0 100%;
+      }
+    }
+
+    .user-nav {
+      align-self: stretch;
+    }
+  }
+
+  .content {
+    display: flex;
+
+    @include tablet-port {
+      flex-direction: column;
+    }
+
+    .sidebar {
+      background-color: var(--color-grey-dark-1);
+
+      flex: 0 0 18%;
+    }
+
+    .hotel-view {
+      background-color: #fff;
+      flex: 1;
+
+      .detail {
+        display: flex;
+        gap: 4rem;
+        padding: 4rem;
+        background-color: var(--color-grey-light-1);
+        border-bottom: var(--line);
+        font-size: 1.4rem;
+
+        @include tablet-port {
+          padding: 3rem;
+          gap: 3rem;
+        }
+
+        @include phone {
+          flex-direction: column;
+        }
+
+        .description {
+          flex: 0 0 60%;
+        }
+
+        .user-reviews {
+          flex: 1;
+        }
+      }
+    }
+  }
+}

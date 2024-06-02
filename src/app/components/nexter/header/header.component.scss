@@ -1,0 +1,59 @@
+@import "mixins";
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
+  row-gap: 1.5rem;
+  padding: 8rem;
+  justify-content: center;
+
+  padding-top: 4rem;
+
+  @include phone {
+    padding: 5rem;
+  }
+
+  &__logo {
+    height: 3rem;
+    justify-self: center;
+  }
+
+  &__btn {
+    align-self: start;
+    justify-self: start;
+  }
+
+  &__seenon-text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+    align-items: center;
+
+    font-size: 1.6rem;
+    color: var(--color-nexter-grey-light-2);
+
+    &::before,
+    &::after {
+      content: "";
+      height: 1px;
+      background-color: currentColor;
+      display: block;
+    }
+  }
+
+  &__seenon-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3rem;
+    justify-items: center;
+    align-items: center;
+
+    img {
+      max-height: 2.5rem;
+      max-width: 100%;
+
+      filter: brightness(70%);
+    }
+  }
+}

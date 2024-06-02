@@ -1,0 +1,24 @@
+////// MEDIA QUERY MANAGER //////
+@mixin phone {
+  @media (max-width: 37.5em) {
+    @content;
+  }
+}
+
+@mixin tablet-port {
+  @media (max-width: 56.25em) {
+    @content;
+  }
+}
+
+@mixin tablet-land {
+  @media (max-width: 68em) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 75em) {
+    @content;
+  }
+}

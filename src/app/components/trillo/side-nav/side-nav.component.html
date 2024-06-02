@@ -1,0 +1,54 @@
+<div class="sidenav-container">
+  <ul class="side-nav">
+    <li
+      class="side-nav__item"
+      [ngClass]="{ 'side-nav__item--active': activeIndex === 0 }"
+      (click)="activeIndex = 0"
+    >
+      <a href="/trillo" class="side-nav__link">
+        <svg class="side-nav__icon">
+          <use xlink:href="assets/img/sprite.svg#icon-home"></use>
+        </svg>
+        <span>Hotel</span>
+      </a>
+    </li>
+    <li
+      class="side-nav__item"
+      [ngClass]="{ 'side-nav__item--active': activeIndex === 1 }"
+      (click)="activeIndex = 1"
+    >
+      <a href="/trillo" class="side-nav__link">
+        <svg class="side-nav__icon">
+          <use xlink:href="assets/img/sprite.svg#icon-aircraft-take-off"></use>
+        </svg>
+        <span>Flight</span>
+      </a>
+    </li>
+    <li
+      class="side-nav__item"
+      [ngClass]="{ 'side-nav__item--active': activeIndex === 2 }"
+      (click)="activeIndex = 2"
+    >
+      <a href="/trillo" class="side-nav__link">
+        <svg class="side-nav__icon">
+          <use xlink:href="assets/img/sprite.svg#icon-key"></use>
+        </svg>
+        <span>Car Rental</span>
+      </a>
+    </li>
+    <li
+      class="side-nav__item"
+      [ngClass]="{ 'side-nav__item--active': activeIndex === 3 }"
+      (click)="activeIndex = 3"
+    >
+      <a href="/trillo" class="side-nav__link">
+        <svg class="side-nav__icon">
+          <use xlink:href="assets/img/sprite.svg#icon-map"></use>
+        </svg>
+        <span>Tours</span>
+      </a>
+    </li>
+  </ul>
+
+  <div class="legal">&copy; 2024 by Álex Roca. All rights reserved.</div>
+</div>

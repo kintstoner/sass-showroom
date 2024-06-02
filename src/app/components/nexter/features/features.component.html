@@ -1,0 +1,9 @@
+<section class="features">
+  @for( feature of features ; track feature){
+  <app-feature
+    [icon]="feature.icon"
+    [title]="feature.title"
+    [description]="feature.description"
+  ></app-feature>
+  }
+</section>
